@@ -90,7 +90,7 @@ export function WorkScrollSection() {
                 </div>
 
                 {/* Cards Container */}
-                <div className="relative w-full max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-8 md:gap-16">
+                <div className="relative w-full max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-8 md:gap-16 mt-20 md:mt-0">
                     <AnimatePresence mode="wait">
                         <WorkCard key={workItems[activeIndex].id} item={workItems[activeIndex]} index={activeIndex} />
                     </AnimatePresence>

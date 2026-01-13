@@ -162,7 +162,7 @@ function SkillColumn({
 
             {/* Name Label - Below X axis */}
             <div className="absolute -bottom-24 w-full flex justify-center items-start h-24">
-                <span className="text-[9px] md:text-xs font-medium text-brand-white/60 uppercase tracking-wide text-center leading-tight -rotate-90 md:rotate-0 origin-top md:origin-center translate-y-4 md:translate-y-0 w-max md:w-auto">
+                <span className="text-[8px] md:text-xs font-medium text-brand-white/60 uppercase tracking-wide text-center leading-tight -rotate-90 md:rotate-0 origin-top md:origin-center translate-y-4 md:translate-y-0 w-max md:w-auto">
                     {skill.name}
                 </span>
             </div>
