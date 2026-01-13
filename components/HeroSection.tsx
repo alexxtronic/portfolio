@@ -64,13 +64,13 @@ export function HeroSection() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.2 }}
-                            className="mb-6"
+                            className="mb-8 text-left"
                         >
                             <GradientText
                                 colors={["#ffffff", "#6366f1", "#ffffff"]}
                                 animationSpeed={3.5}
                                 yoyo={true}
-                                className="text-4xl md:text-5xl lg:text-6xl font-bold"
+                                className="font-[family-name:var(--font-cormorant)] text-7xl md:text-8xl lg:text-[9rem] leading-[0.9] tracking-tight"
                             >
                                 Hi, I&apos;m Alex
                             </GradientText>

@@ -45,7 +45,7 @@ export function GlassNav() {
                     </Link>
 
                     {/* Desktop Nav */}
-                    <div className="hidden md:flex items-center gap-8">
+                    <div className="hidden md:flex items-center gap-20">
                         {navItems.map((item) => (
                             <Link
                                 key={item.name}
