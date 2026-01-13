@@ -86,14 +86,15 @@ export function CompetenciesSection() {
                 >
                     {categories.map((category) => (
                         <div key={category} className="flex items-center gap-2">
-                            className={`w-3 h-3 rounded-full ${category === "AI Tools"
-                                ? "bg-yellow-300"
-                                : category === "Advertising"
-                                    ? "bg-yellow-400"
-                                    : category === "CRM"
-                                        ? "bg-yellow-600"
-                                        : "bg-yellow-500"
-                                }`}
+                            <div
+                                className={`w-3 h-3 rounded-full ${category === "AI Tools"
+                                    ? "bg-yellow-300"
+                                    : category === "Advertising"
+                                        ? "bg-yellow-400"
+                                        : category === "CRM"
+                                            ? "bg-yellow-600"
+                                            : "bg-yellow-500"
+                                    }`}
                             />
                             <span className="text-xs uppercase tracking-wider text-brand-white/50">
                                 {category}
