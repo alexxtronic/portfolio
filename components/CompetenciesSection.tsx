@@ -8,10 +8,12 @@ const skills = [
     { name: "Antigravity CLI", level: 95, category: "AI Tools" },
     { name: "Cursor", level: 90, category: "AI Tools" },
     { name: "LinkedIn Ads", level: 85, category: "Advertising" },
-    { name: "Agentic Automation", level: 80, category: "AI Tools" },
+    { name: "Claude Code", level: 80, category: "AI Tools" },
+    { name: "Clay CRM", level: 80, category: "CRM" },
     { name: "Meta Ads", level: 80, category: "Advertising" },
     { name: "Codex", level: 80, category: "AI Tools" },
     { name: "HubSpot", level: 75, category: "CRM" },
+    { name: "Ahrefs", level: 75, category: "Advertising" },
     { name: "n8n", level: 70, category: "Automation" },
     { name: "Make.com", level: 60, category: "Automation" },
 ];
