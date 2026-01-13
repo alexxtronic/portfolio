@@ -136,7 +136,7 @@ function ReviewCard({
                     </div>
 
                     {/* Quote Text */}
-                    <p className="text-brand-black font-[family-name:var(--font-cormorant)] text-lg md:text-xl leading-relaxed italic">
+                    <p className="text-brand-black font-[family-name:var(--font-cormorant)] text-lg md:text-xl leading-relaxed italic font-semibold">
                         &ldquo;{review.text}&rdquo;
                     </p>
                 </div>
