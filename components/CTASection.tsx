@@ -30,7 +30,7 @@ export function CTASection() {
                         className="font-[family-name:var(--font-cormorant)] text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-6"
                     >
                         Want to build something{" "}
-                        <span className="italic text-brand-blue">sharp</span>?
+                        <span className="italic text-brand-blue">next-level</span>?
                     </motion.h2>
 
                     {/* Subtext */}

@@ -76,7 +76,7 @@ export function WorkScrollSection() {
         <section
             ref={containerRef}
             className="relative"
-            style={{ height: `${workItems.length * 100}vh` }}
+            style={{ height: `${workItems.length * 50}vh` }}
         >
             {/* Sticky Container - This is what "freezes" on screen */}
             <div className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden">
