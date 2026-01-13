@@ -60,7 +60,7 @@ export function BottomAudioPlayer() {
                                     {isPlaying ? (
                                         <Pause className="w-4 h-4 fill-current" />
                                     ) : (
-                                        <Play className="w-4 h-4 fill-current ml-[1px]" />
+                                        <Play className="w-4 h-4 fill-current" />
                                     )}
                                 </button>
                             </div>
