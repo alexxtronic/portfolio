@@ -92,7 +92,7 @@ export function HeroSection() {
                             transition={{ delay: 0.5 }}
                             className="text-lg md:text-xl text-brand-white/60 max-w-xl mb-8 leading-relaxed text-left"
                         >
-                            I&apos;ve made over 40 enterprise B2B companies super-human with AI, paid ads and CRM.
+                            I&apos;ve helped over 40 enterprise B2B companies go super-human with AI, paid ads and CRM integrations.
                         </motion.p>
 
                         <motion.div
