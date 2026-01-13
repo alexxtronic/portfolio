@@ -44,7 +44,7 @@ export function HeroSection() {
                             className="mb-8 text-left"
                         >
                             <span
-                                className="font-[family-name:var(--font-cormorant)] text-[15vw] lg:text-[9rem] leading-[0.9] tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-indigo-400 to-white animate-gradient block whitespace-nowrap"
+                                className="font-[family-name:var(--font-cormorant)] text-[13vw] md:text-[11vw] lg:text-[7vw] leading-[0.9] tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-indigo-400 to-white animate-gradient block whitespace-nowrap"
                                 style={{ backgroundSize: "200% auto" }}
                             >
                                 Hi, I&apos;m Alex
