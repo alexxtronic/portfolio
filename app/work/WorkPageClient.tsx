@@ -171,7 +171,8 @@ function CaseStudyCard({
                 height="auto"
                 className="w-full"
             >
-                <div className="relative overflow-hidden rounded-3xl bg-brand-white/5 border border-brand-white/10">
+                <div className={`relative overflow-hidden rounded-3xl border border-brand-white/10 ${study.title === "LEMAN" ? "bg-[#060606]" : "bg-brand-white/5"
+                    }`}>
                     {/* Thumbnail */}
                     <div className="relative aspect-video bg-gradient-to-br from-brand-blue/20 to-brand-red/20 overflow-hidden">
                         {/* Placeholder gradient - replace with actual images */}
