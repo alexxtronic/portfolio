@@ -151,16 +151,16 @@ export function HeroSection() {
                                     {/* Frosted Glass Play Button - positioned over the image's play button */}
                                     <button
                                         onClick={toggleAudio}
-                                        className="absolute left-1/2 -translate-x-1/2 bottom-[10%] w-11 h-11 flex items-center justify-center rounded-full bg-brand-white/20 backdrop-blur-xl border border-brand-white/30 hover:bg-brand-white/30 transition-all cursor-pointer shadow-lg"
+                                        className="absolute left-1/2 -translate-x-1/2 bottom-[11%] w-20 h-20 flex items-center justify-center rounded-full bg-brand-white/20 backdrop-blur-xl border border-brand-white/30 hover:bg-brand-white/30 transition-all cursor-pointer shadow-lg"
                                         aria-label={isPlaying ? "Pause greeting" : "Play greeting"}
                                     >
                                         {/* Red pulsing ring */}
                                         <div className="absolute inset-[-6px] rounded-full border-2 border-brand-red animate-ping opacity-75" />
                                         <div className="absolute inset-[-3px] rounded-full border border-brand-red/50 animate-pulse" />
                                         {isPlaying ? (
-                                            <Pause className="w-5 h-5 text-brand-white" />
+                                            <Pause className="w-8 h-8 text-brand-white" />
                                         ) : (
-                                            <Play className="w-5 h-5 text-brand-white ml-0.5" />
+                                            <Play className="w-8 h-8 text-brand-white ml-1" />
                                         )}
                                     </button>
                                 </div>
