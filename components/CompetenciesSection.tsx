@@ -88,12 +88,12 @@ export function CompetenciesSection() {
                         <div key={category} className="flex items-center gap-2">
                             <div
                                 className={`w-3 h-3 rounded-full ${category === "AI Tools"
-                                    ? "bg-yellow-300"
+                                    ? "bg-yellow-200"
                                     : category === "Advertising"
                                         ? "bg-yellow-400"
                                         : category === "CRM"
-                                            ? "bg-yellow-600"
-                                            : "bg-yellow-500"
+                                            ? "bg-orange-600"
+                                            : "bg-amber-500"
                                     }`}
                             />
                             <span className="text-xs uppercase tracking-wider text-brand-white/50">
@@ -119,13 +119,13 @@ function SkillBar({
     const getBarColor = (category: string) => {
         switch (category) {
             case "AI Tools":
-                return "bg-gradient-to-r from-yellow-300 to-yellow-300/60";
+                return "bg-gradient-to-r from-yellow-200 to-yellow-200/60";
             case "Advertising":
                 return "bg-gradient-to-r from-yellow-400 to-yellow-400/60";
             case "CRM":
-                return "bg-gradient-to-r from-yellow-600 to-yellow-600/60";
+                return "bg-gradient-to-r from-orange-600 to-orange-600/60";
             case "Automation":
-                return "bg-gradient-to-r from-yellow-500 to-yellow-500/60";
+                return "bg-gradient-to-r from-amber-500 to-amber-500/60";
             default:
                 return "bg-gradient-to-r from-brand-white to-brand-white/60";
         }
