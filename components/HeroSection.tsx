@@ -81,9 +81,9 @@ export function HeroSection() {
                             className="font-[family-name:var(--font-cormorant)] text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[0.95] mb-6 text-left"
                         >
                             I connect{" "}
-                            <span className="italic text-brand-blue">Marketing</span>
+                            <span className="italic">Marketing</span>
                             {" "}and{" "}
-                            <span className="text-red-500">AI</span>
+                            <span>AI</span>
                         </motion.h1>
 
                         <motion.p
