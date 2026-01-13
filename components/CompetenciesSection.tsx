@@ -20,7 +20,7 @@ export function CompetenciesSection() {
     const containerRef = useRef<HTMLDivElement>(null);
     const isInView = useInView(containerRef, { once: true, margin: "-100px" });
 
-    // Group skills by category
+    // Group skills by category for legend
     const categories = [...new Set(skills.map((s) => s.category))];
 
     return (
@@ -46,8 +46,6 @@ export function CompetenciesSection() {
                     <span className="text-xs uppercase tracking-[0.3em] text-brand-blue mb-4 block">
                         Competencies
                     </span>
-
-
                     <div className="flex justify-center">
                         <ScrollFloat stagger={0.05}>
                             The toolkit
@@ -55,25 +53,16 @@ export function CompetenciesSection() {
                     </div>
                 </motion.div>
 
-                {/* Skills Grid */}
-                <div className="max-w-4xl mx-auto">
-                    {/* All skills in order */}
-                    <div className="space-y-6">
-                        {skills.map((skill, index) => (
-                            <motion.div
-                                key={skill.name}
-                                initial={{ opacity: 0, x: -30 }}
-                                animate={isInView ? { opacity: 1, x: 0 } : {}}
-                                transition={{ duration: 0.5, delay: index * 0.05 }}
-                            >
-                                <SkillBar
-                                    skill={skill}
-                                    index={index}
-                                    isInView={isInView}
-                                />
-                            </motion.div>
-                        ))}
-                    </div>
+                {/* Vertical Chart Container */}
+                <div className="max-w-5xl mx-auto h-[500px] flex items-end justify-between gap-2 md:gap-4 pb-12 border-b border-brand-white/10 relative">
+                    {skills.map((skill, index) => (
+                        <SkillColumn
+                            key={skill.name}
+                            skill={skill}
+                            index={index}
+                            isInView={isInView}
+                        />
+                    ))}
                 </div>
 
                 {/* Category Legend */}
@@ -82,7 +71,7 @@ export function CompetenciesSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.5 }}
-                    className="flex flex-wrap justify-center gap-6 mt-12"
+                    className="flex flex-wrap justify-center gap-6 mt-20"
                 >
                     {categories.map((category) => (
                         <div key={category} className="flex items-center gap-2">
@@ -107,7 +96,7 @@ export function CompetenciesSection() {
     );
 }
 
-function SkillBar({
+function SkillColumn({
     skill,
     index,
     isInView,
@@ -119,63 +108,61 @@ function SkillBar({
     const getBarColor = (category: string) => {
         switch (category) {
             case "AI Tools":
-                return "bg-gradient-to-r from-yellow-200 to-yellow-200/60";
+                return "bg-gradient-to-t from-yellow-200 to-yellow-200/60";
             case "Advertising":
-                return "bg-gradient-to-r from-yellow-400 to-yellow-400/60";
+                return "bg-gradient-to-t from-yellow-400 to-yellow-400/60";
             case "CRM":
-                return "bg-gradient-to-r from-orange-600 to-orange-600/60";
+                return "bg-gradient-to-t from-orange-600 to-orange-600/60";
             case "Automation":
-                return "bg-gradient-to-r from-amber-500 to-amber-500/60";
+                return "bg-gradient-to-t from-amber-500 to-amber-500/60";
             default:
-                return "bg-gradient-to-r from-brand-white to-brand-white/60";
+                return "bg-gradient-to-t from-brand-white to-brand-white/60";
         }
     };
 
     return (
-        <div className="group">
-            <div className="flex justify-between items-center mb-2">
-                <span className="text-sm font-medium text-brand-white group-hover:text-brand-blue transition-colors">
-                    {skill.name}
-                </span>
-                <span className="text-xs text-brand-white/50 tabular-nums">
-                    {skill.level}%
-                </span>
-            </div>
-
-            {/* Progress Bar Container */}
-            <div
-                className="relative h-2 bg-brand-white/10 rounded-full overflow-hidden"
-                role="progressbar"
-                aria-valuenow={skill.level}
-                aria-valuemin={0}
-                aria-valuemax={100}
-                aria-label={`${skill.name}: ${skill.level}%`}
+        <div className="relative flex flex-col items-center justify-end h-full w-full group">
+            {/* Percentage Label - Floating above */}
+            <motion.span
+                initial={{ opacity: 0, y: 10 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ delay: 1 + index * 0.1, duration: 0.5 }}
+                className="mb-2 text-xs md:text-sm font-medium text-brand-white/70"
             >
-                {/* Animated Fill */}
+                {skill.level}%
+            </motion.span>
+
+            {/* The Bar */}
+            <div className="w-full h-full max-h-[80%] flex items-end">
                 <motion.div
-                    initial={{ width: 0 }}
-                    animate={isInView ? { width: `${skill.level}%` } : { width: 0 }}
+                    initial={{ height: 0 }}
+                    animate={isInView ? { height: `${skill.level}%` } : {}}
                     transition={{
-                        duration: 1,
-                        delay: index * 0.08,
+                        duration: 1.5,
+                        delay: index * 0.15,
                         ease: [0.25, 0.46, 0.45, 0.94],
                     }}
-                    className={`absolute inset-y-0 left-0 rounded-full ${getBarColor(
-                        skill.category
-                    )}`}
+                    className={`w-full rounded-t-sm md:rounded-t-lg relative overflow-hidden ${getBarColor(skill.category)}`}
                 >
-                    {/* Shine effect */}
+                    {/* Shine effect vertical */}
                     <motion.div
-                        initial={{ x: "-100%" }}
-                        animate={isInView ? { x: "200%" } : { x: "-100%" }}
+                        initial={{ y: "100%" }}
+                        animate={isInView ? { y: "-100%" } : { y: "100%" }}
                         transition={{
                             duration: 1.5,
-                            delay: index * 0.08 + 0.5,
+                            delay: index * 0.15 + 0.5,
                             ease: "easeInOut",
                         }}
-                        className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
+                        className="absolute inset-0 bg-gradient-to-t from-transparent via-white/30 to-transparent"
                     />
                 </motion.div>
+            </div>
+
+            {/* Name Label - Below X axis */}
+            <div className="absolute -bottom-16 w-full flex justify-center items-start h-16">
+                <span className="text-[10px] md:text-xs font-medium text-brand-white/60 uppercase tracking-wide text-center leading-tight -rotate-45 md:rotate-0 origin-top-left md:origin-center translate-y-2 md:translate-y-0 w-24 md:w-auto">
+                    {skill.name}
+                </span>
             </div>
         </div>
     );
