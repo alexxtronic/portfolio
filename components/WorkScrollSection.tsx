@@ -15,10 +15,10 @@ const workItems = [
     },
     {
         id: 2,
-        title: "Scaleup Finance",
+        title: "Novo Nordisk",
         subtitle: "C-Suite HubSpot Optimization",
         description:
-            "Leveraged Antigravity and MCP servers to drive advanced HubSpot optimizations for C-Suite executives. Built custom AI agents that automated lead routing, pipeline forecasting, and executive reporting—reducing manual CRM work by 70%.",
+            "Delivered AI agentic automations including MCP connected dashboard and custom-built SaaS platforms for internal knowledge sharing.",
         video: "/_assets/novoloop2small.mov",
     },
     {
