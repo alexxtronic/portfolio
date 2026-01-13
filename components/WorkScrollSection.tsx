@@ -74,6 +74,7 @@ export function WorkScrollSection() {
 
     return (
         <section
+            id="work-section"
             ref={containerRef}
             className="relative"
             style={{ height: `${workItems.length * 50}vh` }}
