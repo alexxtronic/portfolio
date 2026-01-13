@@ -19,8 +19,8 @@ export function ContactPageClient() {
         setStatus("submitting");
 
         try {
-            // Formspree endpoint - Replace YOUR_FORM_ID with your actual Formspree form ID
-            const response = await fetch("https://formspree.io/f/xgvkbwpv", {
+            // Formspree endpoint
+            const response = await fetch("https://formspree.io/f/mlggeayv", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
