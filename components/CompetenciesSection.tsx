@@ -20,14 +20,13 @@ const skills = [
 
 export function CompetenciesSection() {
     const containerRef = useRef<HTMLDivElement>(null);
-    const isInView = useInView(containerRef, { once: true, margin: "-100px" });
+    const isInView = useInView(containerRef, { once: true, amount: 0.3 });
 
     // Group skills by category for legend
     const categories = [...new Set(skills.map((s) => s.category))];
 
     return (
         <section
-            ref={containerRef}
             className="relative py-24 md:py-32 overflow-hidden"
         >
             {/* Background */}
@@ -56,7 +55,7 @@ export function CompetenciesSection() {
                 </motion.div>
 
                 {/* Vertical Chart Container */}
-                <div className="max-w-5xl mx-auto h-[500px] flex items-end justify-between gap-2 md:gap-4 pb-12 border-b border-brand-white/10 relative">
+                <div ref={containerRef} className="max-w-5xl mx-auto h-[500px] flex items-end justify-between gap-2 md:gap-4 pb-12 border-b border-brand-white/10 relative">
                     {skills.map((skill, index) => (
                         <SkillColumn
                             key={skill.name}
