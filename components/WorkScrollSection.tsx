@@ -151,7 +151,7 @@ function WorkCard({ item, index }: { item: (typeof workItems)[0]; index: number 
             <div className="w-full md:w-[45%]">
                 <div className={`p-10 md:p-12 rounded-[28px] backdrop-blur-xl border border-brand-white/10 ${item.title === "LEMAN" ? "bg-[#060606]" : "bg-brand-white/5"
                     }`}>
-                    <span className="text-brand-blue text-sm uppercase tracking-widest font-medium mb-4 block">
+                    <span className="font-[family-name:var(--font-cormorant)] text-brand-blue text-sm uppercase tracking-widest font-medium mb-4 block">
                         {item.subtitle}
                     </span>
                     <h3 className="font-[family-name:var(--font-cormorant)] text-4xl md:text-5xl lg:text-6xl text-brand-white mb-8">

@@ -22,7 +22,7 @@ export function BlogPageClient({ posts }: BlogPageClientProps) {
                     transition={{ duration: 0.6 }}
                     className="max-w-3xl"
                 >
-                    <span className="text-xs uppercase tracking-[0.3em] text-brand-blue mb-4 block">
+                    <span className="font-[family-name:var(--font-cormorant)] text-xs uppercase tracking-[0.3em] text-brand-blue mb-4 block">
                         Insights
                     </span>
                     <h1 className="font-[family-name:var(--font-cormorant)] text-5xl md:text-6xl lg:text-7xl mb-6">
@@ -137,7 +137,7 @@ function PostCard({ post }: { post: BlogPost }) {
             >
                 <div className="h-full p-6 bg-brand-white/5 backdrop-blur-xl border border-brand-white/10 rounded-2xl hover:bg-brand-white/[0.07] transition-colors flex flex-col">
                     {/* Category */}
-                    <span className="text-xs uppercase tracking-widest text-brand-blue mb-3">
+                    <span className="font-[family-name:var(--font-cormorant)] text-xs uppercase tracking-widest text-brand-blue mb-3">
                         {post.category}
                     </span>
 

@@ -45,7 +45,7 @@ export function CompetenciesSection() {
                     transition={{ duration: 0.6 }}
                     className="text-center mb-16"
                 >
-                    <span className="text-xs uppercase tracking-[0.3em] text-brand-blue mb-4 block">
+                    <span className="font-[family-name:var(--font-cormorant)] text-xs uppercase tracking-[0.3em] text-brand-blue mb-4 block">
                         Competencies
                     </span>
                     <div className="flex justify-center">

@@ -100,7 +100,7 @@ export function WorkPageClient() {
                     transition={{ duration: 0.6 }}
                     className="max-w-3xl"
                 >
-                    <span className="text-xs uppercase tracking-[0.3em] text-brand-blue mb-4 block">
+                    <span className="font-[family-name:var(--font-cormorant)] text-xs uppercase tracking-[0.3em] text-brand-blue mb-4 block">
                         Case Studies
                     </span>
                     <h1 className="font-[family-name:var(--font-cormorant)] text-5xl md:text-6xl lg:text-7xl mb-6">
@@ -192,7 +192,7 @@ function CaseStudyCard({
 
                     {/* Content */}
                     <div className="p-6">
-                        <span className="text-xs uppercase tracking-widest text-brand-blue mb-2 block">
+                        <span className="font-[family-name:var(--font-cormorant)] text-xs uppercase tracking-widest text-brand-blue mb-2 block">
                             {study.category}
                         </span>
                         <h3 className="font-[family-name:var(--font-cormorant)] text-2xl md:text-3xl mb-3 group-hover:text-brand-blue transition-colors">
@@ -277,7 +277,7 @@ function CaseStudyModal({
 
                 {/* Content */}
                 <div className="p-8 md:p-12">
-                    <span className="text-xs uppercase tracking-widest text-brand-blue mb-3 block">
+                    <span className="font-[family-name:var(--font-cormorant)] text-xs uppercase tracking-widest text-brand-blue mb-3 block">
                         {study.category}
                     </span>
                     <h2 className="font-[family-name:var(--font-cormorant)] text-4xl md:text-5xl mb-8">

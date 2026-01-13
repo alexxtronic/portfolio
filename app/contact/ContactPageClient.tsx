@@ -18,15 +18,29 @@ export function ContactPageClient() {
         e.preventDefault();
         setStatus("submitting");
 
-        const mailtoLink = `mailto:alexdamore2@gmail.com?subject=Contact from ${encodeURIComponent(
-            formData.name
-        )}&body=${encodeURIComponent(
-            `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
-        )}`;
+        try {
+            // Formspree endpoint - Replace YOUR_FORM_ID with your actual Formspree form ID
+            const response = await fetch("https://formspree.io/f/xgvkbwpv", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    name: formData.name,
+                    email: formData.email,
+                    message: formData.message,
+                }),
+            });
 
-        await new Promise((resolve) => setTimeout(resolve, 500));
-        window.location.href = mailtoLink;
-        setStatus("success");
+            if (response.ok) {
+                setStatus("success");
+                setFormData({ name: "", email: "", message: "" });
+            } else {
+                setStatus("error");
+            }
+        } catch {
+            setStatus("error");
+        }
     };
 
     return (
@@ -39,7 +53,7 @@ export function ContactPageClient() {
                     transition={{ duration: 0.6 }}
                     className="max-w-3xl mb-12"
                 >
-                    <span className="text-xs uppercase tracking-[0.3em] text-brand-blue mb-4 block">
+                    <span className="font-[family-name:var(--font-cormorant)] text-xs uppercase tracking-[0.3em] text-brand-blue mb-4 block">
                         Get in Touch
                     </span>
                     <h1 className="font-[family-name:var(--font-cormorant)] text-5xl md:text-6xl lg:text-7xl mb-6">
@@ -132,17 +146,17 @@ export function ContactPageClient() {
                                         <CheckCircle className="w-8 h-8 text-green-500" />
                                     </div>
                                     <h3 className="font-[family-name:var(--font-cormorant)] text-2xl mb-3">
-                                        Message Ready!
+                                        Message Sent!
                                     </h3>
                                     <p className="text-brand-white/60 mb-6">
-                                        Your email client should open shortly. If not, click below.
+                                        Thanks for reaching out! I&apos;ll get back to you as soon as possible.
                                     </p>
-                                    <a
-                                        href={`mailto:alexdamore2@gmail.com?subject=Contact from ${formData.name}`}
+                                    <button
+                                        onClick={() => setStatus("idle")}
                                         className="inline-flex items-center gap-2 text-brand-blue hover:underline"
                                     >
-                                        Open email manually →
-                                    </a>
+                                        Send another message →
+                                    </button>
                                 </motion.div>
                             ) : (
                                 <form onSubmit={handleSubmit} className="space-y-6">
