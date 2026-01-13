@@ -66,14 +66,12 @@ export function HeroSection() {
                             transition={{ delay: 0.2 }}
                             className="mb-8 text-left"
                         >
-                            <GradientText
-                                colors={["#ffffff", "#6366f1", "#ffffff"]}
-                                animationSpeed={3.5}
-                                yoyo={true}
-                                className="font-[family-name:var(--font-cormorant)] text-7xl md:text-8xl lg:text-[9rem] leading-[0.9] tracking-tight mx-0 w-full justify-start backdrop-blur-none bg-transparent"
+                            <span
+                                className="font-[family-name:var(--font-cormorant)] text-7xl md:text-8xl lg:text-[9rem] leading-[0.9] tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-indigo-400 to-white animate-gradient block"
+                                style={{ backgroundSize: "200% auto" }}
                             >
                                 Hi, I&apos;m Alex
-                            </GradientText>
+                            </span>
                         </motion.div>
 
                         <motion.h1
@@ -82,10 +80,10 @@ export function HeroSection() {
                             transition={{ delay: 0.3, duration: 0.7 }}
                             className="font-[family-name:var(--font-cormorant)] text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[0.95] mb-6 text-left"
                         >
-                            I turn{" "}
-                            <span className="italic text-brand-blue">data</span>
-                            <br />
-                            into revenue.
+                            I connect{" "}
+                            <span className="italic text-brand-blue">Marketing</span>
+                            {" "}and{" "}
+                            <span className="text-red-500">AI</span>
                         </motion.h1>
 
                         <motion.p
@@ -94,8 +92,7 @@ export function HeroSection() {
                             transition={{ delay: 0.5 }}
                             className="text-lg md:text-xl text-brand-white/60 max-w-xl mb-8 leading-relaxed text-left"
                         >
-                            AI-first strategist architecting custom solutions that replace manual labor with autonomous code.
-                            Scaled the Empire State Building&apos;s TikTok to 1.2M followers. Now leading AI integration for global brands.
+                            I&apos;ve made over 40 enterprise B2B companies super-human with AI, paid ads and CRM.
                         </motion.p>
 
                         <motion.div
@@ -141,13 +138,13 @@ export function HeroSection() {
                                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                                 className="relative"
                             >
-                                <div className="relative rounded-2xl overflow-hidden shadow-[0_0_25px_rgba(255,255,255,0.25)] ring-1 ring-brand-white/20">
+                                <div className="relative">
                                     <Image
                                         src="/assets/images/podcastplayerv2.png"
                                         alt="The AI & Marketing Podcast - An Interview with Alex D'Amore"
                                         width={292}
                                         height={350}
-                                        className="w-full h-auto"
+                                        className="w-full h-auto drop-shadow-[0_0_15px_rgba(255,255,255,0.4)]"
                                         priority
                                     />
 
