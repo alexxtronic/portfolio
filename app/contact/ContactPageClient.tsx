@@ -23,6 +23,7 @@ export function ContactPageClient() {
             const response = await fetch("https://formspree.io/f/mlggeayv", {
                 method: "POST",
                 headers: {
+                    "Accept": "application/json",
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
