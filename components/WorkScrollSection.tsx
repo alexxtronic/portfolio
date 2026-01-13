@@ -81,7 +81,7 @@ export function WorkScrollSection() {
             {/* Sticky Container - This is what "freezes" on screen */}
             <div className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden">
                 {/* Section Header - Moved down to avoid nav obstruction */}
-                <div className="absolute top-10 md:top-14 left-0 right-0 text-center z-20">
+                <div className="absolute top-24 md:top-28 left-0 right-0 text-center z-20">
                     {mounted && (
                         <ScrollFloat stagger={0.04}>
                             Some of my work
