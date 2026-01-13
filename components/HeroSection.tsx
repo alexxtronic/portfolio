@@ -1,50 +1,27 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useRef } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { Play, Pause } from "lucide-react";
 import StarBorder from "./StarBorder";
-import GradientText from "./GradientText";
+import { useAudio } from "@/context/AudioContext";
 
 export function HeroSection() {
-    const [isPlaying, setIsPlaying] = useState(false);
-    const [audioExists, setAudioExists] = useState(true);
-    const [audioError, setAudioError] = useState(false);
-    const audioRef = useRef<HTMLAudioElement>(null);
+    const { isPlaying, togglePlay, play } = useAudio();
 
-    useEffect(() => {
-        // Check if audio file exists
-        fetch("/audio/greeting.mp3", { method: "HEAD" })
-            .then((res) => {
-                if (!res.ok) {
-                    setAudioExists(false);
-                }
-            })
-            .catch(() => {
-                setAudioExists(false);
-            });
-    }, []);
-
-    const toggleAudio = () => {
-        if (!audioExists) {
-            setAudioError(true);
-            return;
-        }
-
-        if (audioRef.current) {
-            if (isPlaying) {
-                audioRef.current.pause();
-            } else {
-                audioRef.current.play();
+    const handlePlayClick = () => {
+        if (!isPlaying) {
+            play();
+            // Scroll to work section
+            const workSection = document.getElementById("work-section");
+            if (workSection) {
+                workSection.scrollIntoView({ behavior: "smooth" });
             }
-            setIsPlaying(!isPlaying);
+        } else {
+            togglePlay();
         }
-    };
-
-    const handleAudioEnd = () => {
-        setIsPlaying(false);
     };
 
     return (
@@ -150,42 +127,21 @@ export function HeroSection() {
 
                                     {/* Frosted Glass Play Button - positioned over the image's play button */}
                                     <button
-                                        onClick={toggleAudio}
-                                        className="absolute left-1/2 -translate-x-1/2 bottom-[10%] w-20 h-20 flex items-center justify-center rounded-full bg-brand-white/20 backdrop-blur-xl border border-brand-white/30 hover:bg-brand-white/30 transition-all cursor-pointer shadow-lg"
+                                        onClick={handlePlayClick}
+                                        className="absolute left-1/2 -translate-x-1/2 bottom-[11%] w-20 h-20 flex items-center justify-center rounded-full bg-brand-white/20 backdrop-blur-xl border border-brand-white/30 hover:bg-brand-white/30 transition-all cursor-pointer shadow-lg"
                                         aria-label={isPlaying ? "Pause greeting" : "Play greeting"}
                                     >
-                                        {/* Red pulsing ring */}
+                                        {/* Red pulsing ring (only when NOT playing to encourage click, or keep pulsing? keeping existing logic style roughly) */}
                                         <div className="absolute inset-[-6px] rounded-full border-2 border-brand-red animate-ping opacity-75" />
                                         <div className="absolute inset-[-3px] rounded-full border border-brand-red/50 animate-pulse" />
                                         {isPlaying ? (
                                             <Pause className="w-8 h-8 text-brand-white" />
                                         ) : (
-                                            <Play className="w-8 h-8 text-brand-white ml-1" />
+                                            <Play className="w-8 h-8 text-brand-white ml-2.5" /> // Adjusted ml for centering
                                         )}
                                     </button>
                                 </div>
-
-                                {/* Audio error message */}
-                                {audioError && !audioExists && (
-                                    <motion.div
-                                        initial={{ opacity: 0, y: 10 }}
-                                        animate={{ opacity: 1, y: 0 }}
-                                        className="absolute -bottom-16 left-0 right-0 text-center"
-                                    >
-                                        <p className="text-xs text-brand-white/50 bg-brand-black/80 backdrop-blur-sm px-4 py-2 rounded-lg inline-block">
-                                            📁 Add file: <code className="text-brand-blue">public/audio/greeting.mp3</code>
-                                        </p>
-                                    </motion.div>
-                                )}
                             </motion.div>
-
-                            {/* Hidden audio element */}
-                            <audio
-                                ref={audioRef}
-                                src="/audio/greeting.mp3"
-                                onEnded={handleAudioEnd}
-                                preload="none"
-                            />
                         </div>
                     </motion.div>
                 </div>

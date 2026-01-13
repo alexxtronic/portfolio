@@ -19,7 +19,7 @@ export function CTASection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8 }}
-                    className="max-w-4xl mx-auto text-center"
+                    className="max-w-6xl mx-auto text-center"
                 >
                     {/* Headline */}
                     <motion.h2
@@ -30,7 +30,7 @@ export function CTASection() {
                         className="font-[family-name:var(--font-cormorant)] text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-6"
                     >
                         Want to build something{" "}
-                        <span className="italic text-brand-blue">next-level</span>?
+                        <span className="italic text-brand-white whitespace-nowrap">next-level</span>?
                     </motion.h2>
 
                     {/* Subtext */}

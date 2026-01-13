@@ -3,6 +3,8 @@ import { Inter, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import { GlassNav } from "@/components/GlassNav";
 import { Footer } from "@/components/Footer";
+import { AudioProvider } from "@/context/AudioContext";
+import { BottomAudioPlayer } from "@/components/BottomAudioPlayer";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -70,9 +72,12 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${cormorant.variable} antialiased bg-brand-black text-brand-white overflow-x-clip`}
       >
-        <GlassNav />
-        <main>{children}</main>
-        <Footer />
+        <AudioProvider>
+          <GlassNav />
+          <main>{children}</main>
+          <BottomAudioPlayer />
+          <Footer />
+        </AudioProvider>
       </body>
     </html>
   );
