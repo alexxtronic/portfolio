@@ -127,7 +127,7 @@ function WorkCard({ item, index }: { item: (typeof workItems)[0]; index: number 
             {/* Video Side - Pure Black Background */}
             <div className="w-full md:w-[55%]">
                 <div
-                    className={`relative aspect-square rounded-[24px] overflow-hidden shadow-2xl ${item.title === "LEMAN" ? "bg-[#060606]" : "bg-black"
+                    className={`relative aspect-square rounded-[24px] overflow-hidden shadow-2xl ${item.title === "LEMAN" ? "bg-[#000000]" : "bg-black"
                         }`}
                 >
                     {item.video ? (
