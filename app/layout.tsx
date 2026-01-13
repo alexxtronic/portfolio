@@ -38,12 +38,21 @@ export const metadata: Metadata = {
       "I build AI-driven marketing systems that turn noise into pipeline.",
     type: "website",
     locale: "en_US",
+    images: [
+      {
+        url: "/assets/images/graphimage.png",
+        width: 1200,
+        height: 630,
+        alt: "Alexander D'Amore - AI & Marketing Specialist",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Alexander D'Amore | AI & Marketing Specialist",
     description:
       "I build AI-driven marketing systems that turn noise into pipeline.",
+    images: ["/assets/images/graphimage.png"],
   },
   robots: {
     index: true,
