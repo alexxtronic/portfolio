@@ -52,7 +52,7 @@ export function BottomAudioPlayer() {
                             </div>
 
                             {/* Play/Pause (Center) */}
-                            <div className="flex justify-center">
+                            <div className="flex justify-center translate-x-[2%]">
                                 <button
                                     onClick={togglePlay}
                                     className="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center hover:bg-gray-200 transition-colors shrink-0"
@@ -60,7 +60,7 @@ export function BottomAudioPlayer() {
                                     {isPlaying ? (
                                         <Pause className="w-4 h-4 fill-current" />
                                     ) : (
-                                        <Play className="w-4 h-4 fill-current ml-0.5" />
+                                        <Play className="w-4 h-4 fill-current ml-[2px]" />
                                     )}
                                 </button>
                             </div>
