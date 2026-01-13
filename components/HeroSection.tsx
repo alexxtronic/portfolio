@@ -70,7 +70,7 @@ export function HeroSection() {
                                 colors={["#ffffff", "#6366f1", "#ffffff"]}
                                 animationSpeed={3.5}
                                 yoyo={true}
-                                className="font-[family-name:var(--font-cormorant)] text-7xl md:text-8xl lg:text-[9rem] leading-[0.9] tracking-tight"
+                                className="font-[family-name:var(--font-cormorant)] text-7xl md:text-8xl lg:text-[9rem] leading-[0.9] tracking-tight mx-0 w-full justify-start backdrop-blur-none bg-transparent"
                             >
                                 Hi, I&apos;m Alex
                             </GradientText>
@@ -80,7 +80,7 @@ export function HeroSection() {
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.3, duration: 0.7 }}
-                            className="font-[family-name:var(--font-cormorant)] text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[0.95] mb-6"
+                            className="font-[family-name:var(--font-cormorant)] text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[0.95] mb-6 text-left"
                         >
                             I turn{" "}
                             <span className="italic text-brand-blue">data</span>
@@ -92,7 +92,7 @@ export function HeroSection() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.5 }}
-                            className="text-lg md:text-xl text-brand-white/60 max-w-xl mb-8 leading-relaxed"
+                            className="text-lg md:text-xl text-brand-white/60 max-w-xl mb-8 leading-relaxed text-left"
                         >
                             AI-first strategist architecting custom solutions that replace manual labor with autonomous code.
                             Scaled the Empire State Building&apos;s TikTok to 1.2M followers. Now leading AI integration for global brands.
@@ -143,7 +143,7 @@ export function HeroSection() {
                             >
                                 <div className="relative rounded-2xl overflow-hidden shadow-[0_0_25px_rgba(255,255,255,0.25)] ring-1 ring-brand-white/20">
                                     <Image
-                                        src="/assets/images/podcast.png"
+                                        src="/assets/images/podcastplayerv2.png"
                                         alt="The AI & Marketing Podcast - An Interview with Alex D'Amore"
                                         width={292}
                                         height={350}
