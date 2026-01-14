@@ -2,22 +2,25 @@
 
 /* Brand Colors */
 :root {
-  --color-black: #000000;
-  --color-white: #fffdf6;
-  --color-blue: #636ba1;
-  --color-red: #9d3a1a;
+  --color-black: #0a0900;
+  --color-white: #ffffff;
+  --color-blue: #b8ab00;
+  --color-red: #787008;
 
-  --background: #000000;
-  --foreground: #fffdf6;
+  --background: #0a0900;
+  --foreground: #ffffff;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-brand-black: #000000;
-  --color-brand-white: #fffdf6;
-  --color-brand-blue: #636ba1;
-  --color-brand-red: #9d3a1a;
+  --color-brand-black: #0a0900;
+  --color-brand-white: #ffffff;
+  --color-brand-blue: #b8ab00;
+  --color-brand-red: #787008;
+  --color-brand-yellow: #b8ab00;
+  --color-brand-yellow-bright: #dece02;
+  --color-brand-yellow-dark: #787008;
   --font-sans: var(--font-inter);
   --font-serif: var(--font-cormorant);
 }

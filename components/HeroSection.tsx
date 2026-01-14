@@ -7,6 +7,7 @@ import Link from "next/link";
 import { Play, Pause } from "lucide-react";
 import StarBorder from "./StarBorder";
 import { useAudio } from "@/context/AudioContext";
+import LightPillar from "./LightPillar";
 
 export function HeroSection() {
     const { isPlaying, togglePlay, play } = useAudio();
@@ -26,7 +27,18 @@ export function HeroSection() {
 
     return (
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 md:pt-32 pb-20 md:pb-0">
-
+            <div className="absolute inset-0 z-0">
+                <LightPillar
+                    topColor="#000000"
+                    bottomColor="#b1a400"
+                    intensity={2.2}
+                    rotationSpeed={0.7}
+                    pillarWidth={2.9}
+                    pillarHeight={0.7}
+                    noiseIntensity={0}
+                    pillarRotation={322}
+                />
+            </div>
 
             <div className="container mx-auto px-6 relative z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -44,7 +56,7 @@ export function HeroSection() {
                             className="mb-8 text-left"
                         >
                             <span
-                                className="font-[family-name:var(--font-cormorant)] text-[13vw] md:text-[11vw] lg:text-[7vw] xl:text-[6vw] 2xl:text-[5vw] leading-[0.9] tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-indigo-400 to-white animate-gradient block whitespace-nowrap"
+                                className="font-[family-name:var(--font-cormorant)] text-[13vw] md:text-[11vw] lg:text-[7vw] xl:text-[6vw] 2xl:text-[5vw] leading-[0.9] tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-brand-white via-brand-blue to-brand-white animate-gradient block whitespace-nowrap"
                                 style={{ backgroundSize: "200% auto" }}
                             >
                                 Hi, I&apos;m Alex
@@ -137,7 +149,7 @@ export function HeroSection() {
                                         {isPlaying ? (
                                             <Pause className="w-8 h-8 text-brand-white" />
                                         ) : (
-                                            <Play className="w-8 h-8 text-brand-white ml-2.5" /> // Adjusted ml for centering
+                                            <Play className="w-8 h-8 text-brand-white ml-1.5" />
                                         )}
                                     </button>
                                 </div>
