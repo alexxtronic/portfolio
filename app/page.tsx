@@ -13,14 +13,13 @@ export default function Home() {
       <div className="fixed inset-0 z-0 pointer-events-none">
         <LightPillar
           topColor="#000000"
-          bottomColor="#b1a400"
-          intensity={1.8}
-          rotationSpeed={0.7}
-          glowAmount={0.001}
+          bottomColor="#8c2c03"
+          intensity={1.7}
+          rotationSpeed={0.8}
           pillarWidth={2.9}
           pillarHeight={0.7}
           noiseIntensity={0}
-          pillarRotation={322}
+          pillarRotation={309}
         />
       </div>
 
