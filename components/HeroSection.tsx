@@ -7,7 +7,7 @@ import Link from "next/link";
 import { Play, Pause } from "lucide-react";
 import StarBorder from "./StarBorder";
 import { useAudio } from "@/context/AudioContext";
-import LightPillar from "./LightPillar";
+
 
 export function HeroSection() {
     const { isPlaying, togglePlay, play } = useAudio();
@@ -27,21 +27,7 @@ export function HeroSection() {
 
     return (
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 md:pt-32 pb-20 md:pb-0">
-            <div className="absolute inset-0 z-0">
-                <LightPillar
-                    topColor="#000000"
-                    bottomColor="#b1a400"
-                    intensity={1.8}
-                    rotationSpeed={0.7}
-                    glowAmount={0.001}
-                    pillarWidth={2.9}
-                    pillarHeight={0.7}
-                    noiseIntensity={0}
-                    pillarRotation={322}
-                />
-            </div>
-
-            <div className="container mx-auto px-6 relative z-10">
+            {/* Background: Transparent to show global LightPillar */}            <div className="container mx-auto px-6 relative z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                     {/* Left Column - Text */}
                     <motion.div
