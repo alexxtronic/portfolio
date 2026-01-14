@@ -12,16 +12,15 @@ export default function Home() {
       {/* Persistent Background */}
       <div className="fixed inset-0 z-0 pointer-events-none">
         <LightPillar
-          topColor="#b09dfb"
-          bottomColor="#ffbead"
-          intensity={1.9}
-          rotationSpeed={0.6}
+          topColor="#000000"
+          bottomColor="#b1a400"
+          intensity={1.8}
+          rotationSpeed={0.7}
           glowAmount={0.001}
           pillarWidth={2.9}
-          pillarHeight={0.5}
+          pillarHeight={0.7}
           noiseIntensity={0}
-          mixBlendMode="normal"
-          pillarRotation={140}
+          pillarRotation={322}
         />
       </div>
 
