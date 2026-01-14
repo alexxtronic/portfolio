@@ -1,6 +1,35 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { Star, Quote } from "lucide-react";
+import Image from "next/image";
+import GlassSurface from "./GlassSurface";
+import ScrollFloat from "./ScrollFloat";
 import LightPillar from "./LightPillar";
 
-// ... reviews array ...
+const reviews = [
+    {
+        name: "Jentry Theis",
+        role: "Marketing Director @ Humana",
+        image: "/assets/images/reviews/jentry.jpg",
+        text: "Alex always kept an eye out for new features to test and learn with an agile approach. His can-do and get-it-done attitude was certainly an asset to our team, and I enjoyed working with him!",
+        stars: 5,
+    },
+    {
+        name: "Henrik Stenmann",
+        role: "CEO @ Dear Future",
+        image: "/assets/images/reviews/henrik.jpg",
+        text: "Alex excels at quickly adopting and applying new AI tools in practice. He works at a fast pace and is able to juggle multiple technologies simultaneously, enabling him to create tangible value in a short time. I can recommend Alex to companies looking for someone with strong competencies in AI and technology!",
+        stars: 5,
+    },
+    {
+        name: "John Synnes",
+        role: "Lead Data & AI Strategy @ Dear Future",
+        image: "/assets/images/reviews/john.jpg",
+        text: "Alex approaches challenges in ways that make me think differently, and I'm constantly learning from how he navigates complexity. Add in his professionalism and that get **** done energy, and he's setting a bar I genuinely look up to!",
+        stars: 5,
+    },
+];
 
 export function ReviewsSection() {
     return (
