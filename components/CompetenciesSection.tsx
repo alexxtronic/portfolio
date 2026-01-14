@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import ScrollFloat from "./ScrollFloat";
+import LightPillar from "./LightPillar";
 
 const skills = [
     { name: "Antigravity CLI", level: 95, category: "AI Tools" },
@@ -30,9 +31,19 @@ export function CompetenciesSection() {
             className="relative py-24 md:py-32 overflow-hidden"
         >
             {/* Background */}
-            <div className="absolute inset-0">
-                <div className="absolute top-1/2 left-1/4 w-[400px] h-[400px] bg-brand-blue/10 rounded-full blur-[150px] pointer-events-none" />
-                <div className="absolute top-1/4 right-1/3 w-[300px] h-[300px] bg-brand-red/10 rounded-full blur-[120px] pointer-events-none" />
+            {/* Background */}
+            <div className="absolute inset-0 z-0">
+                <LightPillar
+                    topColor="#000000"
+                    bottomColor="#b1a400"
+                    intensity={1.8}
+                    rotationSpeed={0.7}
+                    glowAmount={0.001}
+                    pillarWidth={2.9}
+                    pillarHeight={0.7}
+                    noiseIntensity={0}
+                    pillarRotation={322}
+                />
             </div>
 
             <div className="container mx-auto px-6 relative z-10">
