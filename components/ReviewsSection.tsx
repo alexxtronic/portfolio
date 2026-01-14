@@ -1,44 +1,24 @@
-"use client";
+import LightPillar from "./LightPillar";
 
-import { motion } from "framer-motion";
-import { Star, Quote } from "lucide-react";
-import Image from "next/image";
-import GlassSurface from "./GlassSurface";
-import ScrollFloat from "./ScrollFloat";
-
-const reviews = [
-    {
-        name: "Jentry Theis",
-        role: "Marketing Director @ Humana",
-        image: "/assets/images/reviews/jentry.jpg",
-        text: "Alex always kept an eye out for new features to test and learn with an agile approach. His can-do and get-it-done attitude was certainly an asset to our team, and I enjoyed working with him!",
-        stars: 5,
-    },
-    {
-        name: "Henrik Stenmann",
-        role: "CEO @ Dear Future",
-        image: "/assets/images/reviews/henrik.jpg",
-        text: "Alex excels at quickly adopting and applying new AI tools in practice. He works at a fast pace and is able to juggle multiple technologies simultaneously, enabling him to create tangible value in a short time. I can recommend Alex to companies looking for someone with strong competencies in AI and technology!",
-        stars: 5,
-    },
-    {
-        name: "John Synnes",
-        role: "Lead Data & AI Strategy @ Dear Future",
-        image: "/assets/images/reviews/john.jpg",
-        text: "Alex approaches challenges in ways that make me think differently, and I'm constantly learning from how he navigates complexity. Add in his professionalism and that get **** done energy, and he's setting a bar I genuinely look up to!",
-        stars: 5,
-    },
-];
+// ... reviews array ...
 
 export function ReviewsSection() {
     return (
         <section className="relative min-h-screen py-24 md:py-32 overflow-hidden">
             {/* Background */}
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-brand-blue/5 to-transparent pointer-events-none" />
-
-            {/* Ambient Glows */}
-            <div className="absolute -top-20 -left-20 w-[500px] h-[500px] bg-brand-blue/10 blur-[100px] rounded-full pointer-events-none" />
-            <div className="absolute -bottom-20 -right-20 w-[500px] h-[500px] bg-brand-red/10 blur-[100px] rounded-full pointer-events-none" />
+            <div className="absolute inset-0 z-0">
+                <LightPillar
+                    topColor="#000000"
+                    bottomColor="#b1a400"
+                    intensity={1.8}
+                    rotationSpeed={0.7}
+                    glowAmount={0.001}
+                    pillarWidth={2.9}
+                    pillarHeight={0.7}
+                    noiseIntensity={0}
+                    pillarRotation={322}
+                />
+            </div>
 
             <div className="container mx-auto px-6 relative z-10">
                 {/* Header */}

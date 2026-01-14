@@ -31,8 +31,9 @@ export function HeroSection() {
                 <LightPillar
                     topColor="#000000"
                     bottomColor="#b1a400"
-                    intensity={2.2}
+                    intensity={1.8}
                     rotationSpeed={0.7}
+                    glowAmount={0.001}
                     pillarWidth={2.9}
                     pillarHeight={0.7}
                     noiseIntensity={0}
