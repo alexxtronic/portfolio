@@ -180,8 +180,8 @@ export default function HomeClient({ posts }: { posts: BlogPost[] }) {
           <div className="stage__in">
             <p className="head mono"><span><span className="sq" aria-hidden="true"></span>Senior marketing creative &amp; MarTech strategist</span><span>Copenhagen &middot; Ex-New York</span></p>
             <div className="hero__stack">
-              <figure className="hero__photo"><img src="/assets/images/headshot.webp" alt="Portrait of Alexander D&rsquo;Amore" width="1445" height="2000" /></figure>
               <div className="hero__name"><h1>Alexander</h1><h1>D&rsquo;Amore<span className="dot">.</span></h1></div>
+              <figure className="hero__photo"><div className="hero__disc"><img src="/assets/images/headshot.webp" alt="Portrait of Alexander D&rsquo;Amore" width="1445" height="2000" /></div></figure>
             </div>
             <div className="hero__foot">
               <p className="lede">Over a decade making brands people stop scrolling for, and building the CRM and automation that turn that attention into pipeline. Based in Copenhagen, freelancing remotely for US teams.</p>
