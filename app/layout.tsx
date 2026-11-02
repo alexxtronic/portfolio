@@ -1,10 +1,6 @@
 import type { Metadata } from "next";
-import { Inter, Cormorant_Garamond } from "next/font/google";
+import { Inter, Cormorant_Garamond, Archivo, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
-import { GlassNav } from "@/components/GlassNav";
-import { Footer } from "@/components/Footer";
-import { AudioProvider } from "@/context/AudioContext";
-import { BottomAudioPlayer } from "@/components/BottomAudioPlayer";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -18,6 +14,21 @@ const cormorant = Cormorant_Garamond({
   display: "swap",
   weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
+});
+
+// Homepage type: Archivo with its width axis for the condensed and wide cuts, plus Plex Mono for labels.
+const archivo = Archivo({
+  variable: "--font-archivo",
+  subsets: ["latin"],
+  display: "swap",
+  axes: ["wdth"],
+});
+
+const plexMono = IBM_Plex_Mono({
+  variable: "--font-plex-mono",
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "500"],
 });
 
 export const metadata: Metadata = {
@@ -70,14 +81,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body
-        className={`${inter.variable} ${cormorant.variable} antialiased bg-brand-black text-brand-white overflow-x-clip`}
+        className={`${inter.variable} ${cormorant.variable} ${archivo.variable} ${plexMono.variable} antialiased bg-brand-black text-brand-white overflow-x-clip`}
       >
-        <AudioProvider>
-          <GlassNav />
-          <main>{children}</main>
-          <BottomAudioPlayer />
-          <Footer />
-        </AudioProvider>
+        {children}
       </body>
     </html>
   );
