@@ -31,24 +31,34 @@ const plexMono = IBM_Plex_Mono({
   weight: ["400", "500"],
 });
 
+const siteDescription =
+  "Alexander D'Amore is a senior marketing creative and MarTech strategist. Social, paid and brand work for names like the Empire State Building and Global Citizen, plus the CRM, AI and automation that turn attention into pipeline. Freelance, remote, for US and EU teams.";
+
 export const metadata: Metadata = {
-  title: "Alexander D'Amore | AI & Marketing Specialist",
-  description:
-    "Senior AI & Marketing Specialist building automation systems that turn noise into pipeline. Expert in HubSpot, AI agents, and growth frameworks.",
+  metadataBase: new URL("https://alexanderdamore.com"),
+  title: {
+    default: "Alexander D'Amore | Senior Marketing Creative & MarTech Strategist",
+    template: "%s | Alexander D'Amore",
+  },
+  description: siteDescription,
   keywords: [
-    "AI Marketing",
-    "Marketing Automation",
+    "Freelance marketing creative",
+    "MarTech strategist",
+    "AI marketing",
+    "Marketing automation",
     "HubSpot",
-    "Growth Marketing",
-    "AI Specialist",
+    "Lead scoring",
+    "Clay",
     "n8n",
-    "Agentic AI",
+    "Social media strategy",
   ],
-  authors: [{ name: "Alexander D'Amore" }],
+  authors: [{ name: "Alexander D'Amore", url: "https://alexanderdamore.com" }],
+  alternates: { canonical: "/", types: { "application/rss+xml": "/blog/rss.xml" } },
   openGraph: {
-    title: "Alexander D'Amore | AI & Marketing Specialist",
-    description:
-      "I build AI-driven marketing systems that turn noise into pipeline.",
+    title: "Alexander D'Amore | Senior Marketing Creative & MarTech Strategist",
+    description: siteDescription,
+    url: "/",
+    siteName: "Alexander D'Amore",
     type: "website",
     locale: "en_US",
     images: [
@@ -56,15 +66,14 @@ export const metadata: Metadata = {
         url: "/assets/images/graphimage.png",
         width: 1200,
         height: 630,
-        alt: "Alexander D'Amore - AI & Marketing Specialist",
+        alt: "Alexander D'Amore, senior marketing creative and MarTech strategist",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Alexander D'Amore | AI & Marketing Specialist",
-    description:
-      "I build AI-driven marketing systems that turn noise into pipeline.",
+    title: "Alexander D'Amore | Senior Marketing Creative & MarTech Strategist",
+    description: siteDescription,
     images: ["/assets/images/graphimage.png"],
   },
   robots: {

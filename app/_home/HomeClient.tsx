@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import Link from "next/link";
-import type { BlogPost } from "@/lib/notion";
+import type { PostSummary } from "@/lib/blog";
 import { startScrollEngine } from "./scrollEngine";
 import "./home.css";
 
@@ -65,7 +65,7 @@ function makeGlobe(globe: SVGSVGElement) {
   return { draw, remove: () => dots.forEach((d) => d.remove()) };
 }
 
-export default function HomeClient({ posts }: { posts: BlogPost[] }) {
+export default function HomeClient({ posts }: { posts: PostSummary[] }) {
   const rootRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -181,7 +181,11 @@ export default function HomeClient({ posts }: { posts: BlogPost[] }) {
             <p className="head mono"><span><span className="sq" aria-hidden="true"></span>Senior marketing creative &amp; MarTech strategist</span><span>Copenhagen &middot; Ex-New York</span></p>
             <div className="hero__stack">
               <div className="hero__name"><h1>Alexander</h1><h1>D&rsquo;Amore<span className="dot">.</span></h1></div>
-              <figure className="hero__photo"><div className="hero__disc"><img src="/assets/images/headshot.webp" alt="Portrait of Alexander D&rsquo;Amore" width="1445" height="2000" /></div></figure>
+              <figure className="hero__photo">
+                <div className="hero__disc"><img src="/assets/images/headshot.webp" alt="Portrait of Alexander D&rsquo;Amore" width="1445" height="2000" /></div>
+                <svg className="hero__ring" viewBox="0 0 200 200" aria-hidden="true"><defs><path id="ringPath" d="M100,100 m-93,0 a93,93 0 1,1 186,0 a93,93 0 1,1 -186,0" /></defs><text><textPath href="#ringPath" textLength="582" lengthAdjust="spacing">Senior marketing creative &middot; MarTech strategist &middot; Copenhagen &middot; </textPath></text></svg>
+                <span className="hero__pin" aria-hidden="true"></span>
+              </figure>
             </div>
             <div className="hero__foot">
               <p className="lede">Over a decade making brands people stop scrolling for, and building the CRM and automation that turn that attention into pipeline. Based in Copenhagen, freelancing remotely for US teams.</p>
@@ -370,10 +374,10 @@ export default function HomeClient({ posts }: { posts: BlogPost[] }) {
             <div className="head head--client"><p className="client"><span className="sq" aria-hidden="true"></span>Notes from the work</p><Link className="mono link" href="/blog">All posts &rarr;</Link></div>
             <ol className="posts">
               {posts.map((post) => (
-                <li key={post.id}>
+                <li key={post.slug}>
                   <Link href={`/blog/${post.slug}`}>
                     <span className="mono">{formatDate(post.date)}</span>
-                    <div><h3>{post.title}</h3>{post.featured && post.excerpt ? <p>{post.excerpt}</p> : null}</div>
+                    <div><h3>{post.title}</h3>{post.featured && post.description ? <p>{post.description}</p> : null}</div>
                     <span className="mono">{post.category} &middot; {post.readTime}</span>
                   </Link>
                 </li>
