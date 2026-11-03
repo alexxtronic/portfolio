@@ -1,20 +1,6 @@
 import type { Metadata } from "next";
-import { Inter, Cormorant_Garamond, Archivo, IBM_Plex_Mono } from "next/font/google";
+import { Archivo, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const cormorant = Cormorant_Garamond({
-  variable: "--font-cormorant",
-  subsets: ["latin"],
-  display: "swap",
-  weight: ["400", "500", "600", "700"],
-  style: ["normal", "italic"],
-});
 
 // Homepage type: Archivo with its width axis for the condensed and wide cuts, plus Plex Mono for labels.
 const archivo = Archivo({
@@ -61,20 +47,11 @@ export const metadata: Metadata = {
     siteName: "Alexander D'Amore",
     type: "website",
     locale: "en_US",
-    images: [
-      {
-        url: "/assets/images/graphimage.png",
-        width: 1200,
-        height: 630,
-        alt: "Alexander D'Amore, senior marketing creative and MarTech strategist",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Alexander D'Amore | Senior Marketing Creative & MarTech Strategist",
     description: siteDescription,
-    images: ["/assets/images/graphimage.png"],
   },
   robots: {
     index: true,
@@ -90,7 +67,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body
-        className={`${inter.variable} ${cormorant.variable} ${archivo.variable} ${plexMono.variable} antialiased bg-brand-black text-brand-white overflow-x-clip`}
+        className={`${archivo.variable} ${plexMono.variable} antialiased bg-brand-black text-brand-white overflow-x-clip`}
       >
         {children}
       </body>

@@ -21,8 +21,7 @@
   --color-brand-yellow: #8c0f1a;
   --color-brand-yellow-bright: #b31321;
   --color-brand-yellow-dark: #52080f;
-  --font-sans: var(--font-inter);
-  --font-serif: var(--font-cormorant);
+  --font-sans: var(--font-archivo);
 }
 
 /* Smooth scrolling */

@@ -183,14 +183,25 @@ export default function HomeClient({ posts }: { posts: PostSummary[] }) {
               <div className="hero__name"><h1>Alexander</h1><h1>D&rsquo;Amore<span className="dot">.</span></h1></div>
               <figure className="hero__photo">
                 <div className="hero__disc"><img src="/assets/images/headshot.webp" alt="Portrait of Alexander D&rsquo;Amore" width="1445" height="2000" /></div>
-                <svg className="hero__ring" viewBox="0 0 200 200" aria-hidden="true"><defs><path id="ringPath" d="M100,100 m-93,0 a93,93 0 1,1 186,0 a93,93 0 1,1 -186,0" /></defs><text><textPath href="#ringPath" textLength="582" lengthAdjust="spacing">Senior marketing creative &middot; MarTech strategist &middot; Copenhagen &middot; </textPath></text></svg>
+                <svg className="hero__ring" viewBox="0 0 200 200" aria-hidden="true"><defs><path id="ringPath" d="M100,100 m-93,0 a93,93 0 1,1 186,0 a93,93 0 1,1 -186,0" /></defs><text><textPath href="#ringPath" textLength="582" lengthAdjust="spacing">Available for freelance &middot; Remote &middot; US &amp; EU hours &middot; Available for freelance &middot; Remote &middot; US &amp; EU hours &middot; </textPath></text></svg>
                 <span className="hero__pin" aria-hidden="true"></span>
               </figure>
             </div>
             <div className="hero__foot">
-              <p className="lede">Over a decade making brands people stop scrolling for, and building the CRM and automation that turn that attention into pipeline. Based in Copenhagen, freelancing remotely for US teams.</p>
+              <p className="lede">Ten years making brands people stop scrolling for, and building the CRM and automation that turn that attention into pipeline. Based in Copenhagen, freelancing remotely for US teams.</p>
               <div className="actions"><a className="btn btn--solid" href="#hire">Start a project <span aria-hidden="true">&rarr;</span></a><a className="btn" href="#work">Scroll the story <span aria-hidden="true">&darr;</span></a></div>
             </div>
+            <nav className="clients" aria-label="Selected clients">
+              <span className="mono">Selected clients</span>
+              <ol>
+                <li><a href="#work"><span className="mono">01</span>Empire State Building</a></li>
+                <li><a href="#global-citizen"><span className="mono">02</span>Global Citizen</a></li>
+                <li><a href="#agentic"><span className="mono">03</span>Novo Nordisk</a></li>
+                <li><a href="#agentic"><span className="mono">03</span>Boligsiden</a></li>
+                <li><a href="#specsavers"><span className="mono">04</span>Specsavers</a></li>
+                <li><a href="#leman"><span className="mono">05</span>LEMAN</a></li>
+              </ol>
+            </nav>
           </div>
         </section>
         <div className="dwell" aria-hidden="true"></div>
@@ -198,13 +209,13 @@ export default function HomeClient({ posts }: { posts: PostSummary[] }) {
         <section className="stage zoom" id="work" data-tone="dark" data-label="01 / Empire State">
           <div className="word" aria-hidden="true" style={{ "--chars": "8", "--ox": "47%" } as React.CSSProperties}><span>Landmark</span></div>
           <div className="stage__in detail">
-            <div className="head head--client"><p className="client"><span className="sq" aria-hidden="true"></span>Empire State Building</p><p className="mono">01 &middot; Renegade &middot; New York &middot; 2017&ndash;2025</p></div>
+            <div className="head head--client"><p className="client"><span className="sq" aria-hidden="true"></span>Empire State Building</p><p className="mono">01 &middot; Renegade &middot; New York &middot; 2016&ndash;2025</p></div>
             <div className="tower-wrap">
               <figure className="art art--tower">
-                <svg className="tower" viewBox="0 0 260 440" preserveAspectRatio="xMinYMax meet" role="img" aria-label="The Empire State Building drawn as a bar chart: its antenna reaches the 2.1 million followers line.">
+                <svg className="tower" viewBox="0 0 260 440" preserveAspectRatio="xMinYMax meet" role="img" aria-label="The Empire State Building drawn as a bar chart: its antenna reaches the 2 million followers line.">
                   <g className="step" style={{ "--i": "0" } as React.CSSProperties}>
-                    <path className="ln ln--faint" d="M64 289H260M64 147H260M64 6H260"/>
-                    <text x="0" y="435">0</text><text x="0" y="294">700K</text><text x="0" y="152">1.4M</text><text x="0" y="11">2.1M</text>
+                    <path className="ln ln--faint" d="M64 218H260M64 6H260"/>
+                    <text x="0" y="435">0</text><text x="0" y="223">1M</text><text x="0" y="11">2M</text>
                   </g>
                   <path className="ln" d="M64 430H260"/>
                   <path className="ln draw" pathLength="1" d="M100 430V400H110V380H122V150H130V128H138V112H146V100H152V64H155V52H158.5V6H161.5V52H165V64H168V100H174V112H182V128H190V150H198V380H210V400H220V430"/>
@@ -216,12 +227,12 @@ export default function HomeClient({ posts }: { posts: PostSummary[] }) {
               <div className="tower-side">
                 <ul className="stats">
                 <li><strong data-count="1.2" data-decimals="1" data-suffix="M" data-manual>1.2M</strong><span className="mono">TikTok followers gained</span></li>
-                <li><strong data-count="900" data-suffix="K" data-manual>900K</strong><span className="mono">New Instagram followers</span></li>
-                <li><strong data-count="4" data-suffix="&times;" data-manual>4&times;</strong><span className="mono">ROAS lift on tickets and leasing</span></li>
+                <li><strong data-count="800" data-suffix="K" data-manual>800K</strong><span className="mono">New Instagram followers</span></li>
+                <li><strong data-count="1" data-manual>1</strong><span className="mono">Year from zero to 1.2M on TikTok</span></li>
               </ul>
                 <div className="ch__body">
-              <p className="figure"><span data-count="2.1" data-decimals="1" data-suffix="M" data-manual>2.1M</span><small>Followers gained</small></p>
-              <div className="ch__copy"><h2>The voice of the Empire State Building.</h2><p>Led a small team of social creatives to give the Empire State Building a refreshed image for Gen Z, leading to 1.2M TikTok followers gained on top of 900K new Instagram followers. My reports helped drive a 4&times; ROAS lift in ticket sales and office leasing.</p></div>
+              <p className="figure"><span data-count="2" data-suffix="M" data-manual>2M</span><small>Followers gained</small></p>
+              <div className="ch__copy"><h2>The voice of the Empire State Building.</h2><p>Led a small team of social creatives to give the Empire State Building a refreshed image for Gen Z, taking TikTok from zero to 1.2M followers in a year, on top of 800K new followers on Instagram. Before that I ran the paid ads and built the dashboards its leadership used to make decisions.</p></div>
             </div>
               </div>
             </div>
@@ -229,10 +240,10 @@ export default function HomeClient({ posts }: { posts: PostSummary[] }) {
         </section>
         <div className="dwell zd" aria-hidden="true"></div>
 
-        <section className="stage zoom" data-tone="signal" data-label="02 / Global Citizen">
+        <section className="stage zoom" id="global-citizen" data-tone="signal" data-label="02 / Global Citizen">
           <div className="word" aria-hidden="true" style={{ "--chars": "7", "--ox": "52%" } as React.CSSProperties}><span>Purpose</span></div>
           <div className="stage__in detail">
-            <div className="head head--client"><p className="client"><span className="sq" aria-hidden="true"></span>Global Citizen</p><p className="mono">02 &middot; New York &middot; 2019&ndash;2021</p></div>
+            <div className="head head--client"><p className="client"><span className="sq" aria-hidden="true"></span>Global Citizen</p><p className="mono">02 &middot; New York &middot; 2020&ndash;2022</p></div>
             <div className="ch__mid">
               <figure className="art">
                 <svg className="globe" viewBox="0 0 420 300" preserveAspectRatio="xMinYMax meet" role="img" aria-label="A turning globe with campaign cities marked, New York highlighted.">
@@ -245,9 +256,8 @@ export default function HomeClient({ posts }: { posts: PostSummary[] }) {
                 <figcaption className="mono">Three causes, one audience model</figcaption>
               </figure>
               <ul className="stats">
-                <li><strong data-count="60" data-suffix="K" data-manual>60K</strong><span className="mono">Festival crowd, Central Park</span></li>
                 <li><strong data-count="120" data-prefix="+" data-suffix="K" data-manual>+120K</strong><span className="mono">New followers on core platforms</span></li>
-                <li><strong data-count="17" data-manual>17</strong><span className="mono">Global Goals, memorised</span></li>
+                <li><strong data-count="3" data-manual>3</strong><span className="mono">Cause areas: health, climate, equity</span></li>
               </ul>
             </div>
             <div className="ch__body">
@@ -258,7 +268,7 @@ export default function HomeClient({ posts }: { posts: PostSummary[] }) {
         </section>
         <div className="dwell zd" aria-hidden="true"></div>
 
-        <section className="stage zoom" data-tone="light" data-label="03 / Agentic">
+        <section className="stage zoom" id="agentic" data-tone="light" data-label="03 / Agentic">
           <div className="word" aria-hidden="true" style={{ "--chars": "7", "--ox": "50%" } as React.CSSProperties}><span>Agentic</span></div>
           <div className="stage__in detail">
             <div className="head head--client"><p className="client"><span className="sq" aria-hidden="true"></span>Novo Nordisk &middot; Boligsiden</p><p className="mono">03 &middot; Dear Future &middot; Copenhagen &middot; 2025&ndash;now</p></div>
@@ -283,50 +293,48 @@ export default function HomeClient({ posts }: { posts: PostSummary[] }) {
                 <figcaption className="mono">The brand-sentiment agent, every morning</figcaption>
               </figure>
               <ul className="stats">
-                <li><strong data-count="10" data-suffix="+" data-manual>10+</strong><span className="mono">Hours a week handed back</span></li>
-                <li><strong data-count="55" data-prefix="+" data-suffix="%" data-manual>+55%</strong><span className="mono">Increase in sentiment score</span></li>
-                <li><strong data-count="0" data-manual>0</strong><span className="mono">Spreadsheets updated by hand</span></li>
+                <li><strong>Daily</strong><span className="mono">Brand-sentiment read for Novo Nordisk</span></li>
+                <li><strong>GEO</strong><span className="mono">AI search strategy for Boligsiden, the Nordics&rsquo; largest property portal</span></li>
               </ul>
             </div>
             <div className="ch__body">
-              <p className="figure"><span data-count="70" data-prefix="&minus;" data-suffix="%" data-manual>&minus;70%</span><small>Manual reporting and lead routing</small></p>
+              <p className="figure"><span data-count="70" data-prefix="&minus;" data-suffix="%" data-manual>&minus;70%</span><small>Manual reporting and lead routing, key accounts</small></p>
               <div className="ch__copy"><h2>Agentic lift changed everything.</h2><p>An AI agent platform tracking Novo Nordisk&rsquo;s brand sentiment across the web, an AI search strategy for Boligsiden, and n8n workflows underneath it all.</p></div>
             </div>
           </div>
         </section>
         <div className="dwell zd" aria-hidden="true"></div>
 
-        <section className="stage zoom" data-tone="dark" data-label="04 / Specsavers">
+        <section className="stage zoom" id="specsavers" data-tone="dark" data-label="04 / Specsavers">
           <div className="word" aria-hidden="true" style={{ "--chars": "6", "--ox": "50%" } as React.CSSProperties}><span>Scored</span></div>
           <div className="stage__in detail">
             <div className="head head--client"><p className="client"><span className="sq" aria-hidden="true"></span>Specsavers</p><p className="mono">04 &middot; Marketing automation &middot; 2025</p></div>
             <div className="ch__mid">
               <figure className="art">
-                <svg className="crm" viewBox="0 0 470 262" preserveAspectRatio="xMinYMax meet" role="img" aria-label="A CRM lead list sorted by score. Each lead is enriched by Clay and given a score; the top lead, scored 94, is marked as a sales-qualified lead.">
-                  <g className="step" style={{ "--i": "0" } as React.CSSProperties}><text x="0" y="14">LEAD</text><text x="214" y="14">SCORE</text><text x="338" y="14">CLAY</text><text x="406" y="14">STAGE</text><path className="ln ln--faint" d="M0 24H470"/></g>
-                  <g className="step hit" style={{ "--i": "0.6" } as React.CSSProperties}><circle className="ln" cx="16" cy="50" r="15"/><text x="16" y="53.5" textAnchor="middle">DW</text><text className="nm" x="42" y="47">Dana Whitfield</text><text x="42" y="62">NORTHWIND OPTICAL</text><text className="sc" x="214" y="56">94</text><rect className="track" x="246" y="49" width="76" height="4"/><rect className="bar grow grow--l" style={{ "--i": "1.0" } as React.CSSProperties} x="246" y="49" width="71.4" height="4"/><text x="338" y="55">&#10003; ENRICHED</text><rect className="pill" x="406" y="40" width="56" height="20" rx="10"/><text className="pt" x="434" y="53.5" textAnchor="middle">SQL</text><path className="ln ln--faint" d="M0 72H470"/></g>
-                  <g className="step" style={{ "--i": "1.3" } as React.CSSProperties}><circle className="ln" cx="16" cy="96" r="15"/><text x="16" y="99.5" textAnchor="middle">ML</text><text className="nm" x="42" y="93">Marcus Lee</text><text x="42" y="108">BRIGHTLINE RETAIL</text><text className="sc" x="214" y="102">81</text><rect className="track" x="246" y="95" width="76" height="4"/><rect className="bar grow grow--l" style={{ "--i": "1.7" } as React.CSSProperties} x="246" y="95" width="61.6" height="4"/><text x="338" y="101">&#10003; ENRICHED</text><rect className="pill" x="406" y="86" width="56" height="20" rx="10"/><text className="pt" x="434" y="99.5" textAnchor="middle">MQL</text><path className="ln ln--faint" d="M0 118H470"/></g>
-                  <g className="step" style={{ "--i": "2.0" } as React.CSSProperties}><circle className="ln" cx="16" cy="142" r="15"/><text x="16" y="145.5" textAnchor="middle">PS</text><text className="nm" x="42" y="139">Priya Shah</text><text x="42" y="154">HALDEN CLINICS</text><text className="sc" x="214" y="148">67</text><rect className="track" x="246" y="141" width="76" height="4"/><rect className="bar grow grow--l" style={{ "--i": "2.4" } as React.CSSProperties} x="246" y="141" width="50.9" height="4"/><text x="338" y="147">&#10003; ENRICHED</text><rect className="pill" x="406" y="132" width="56" height="20" rx="10"/><text className="pt" x="434" y="145.5" textAnchor="middle">MQL</text><path className="ln ln--faint" d="M0 164H470"/></g>
-                  <g className="step" style={{ "--i": "2.7" } as React.CSSProperties}><circle className="ln" cx="16" cy="188" r="15"/><text x="16" y="191.5" textAnchor="middle">TB</text><text className="nm" x="42" y="185">Tom Becker</text><text x="42" y="200">ORCA LOGISTICS</text><text className="sc" x="214" y="194">42</text><rect className="track" x="246" y="187" width="76" height="4"/><rect className="bar grow grow--l" style={{ "--i": "3.1" } as React.CSSProperties} x="246" y="187" width="31.9" height="4"/><text x="338" y="193">&ndash;</text><rect className="pill" x="406" y="178" width="56" height="20" rx="10"/><text className="pt" x="434" y="191.5" textAnchor="middle">LEAD</text><path className="ln ln--faint" d="M0 210H470"/></g>
-                  <g className="step" style={{ "--i": "3.4" } as React.CSSProperties}><circle className="ln" cx="16" cy="234" r="15"/><text x="16" y="237.5" textAnchor="middle">IM</text><text className="nm" x="42" y="231">Ines Moreau</text><text x="42" y="246">LUMEN STUDIOS</text><text className="sc" x="214" y="240">18</text><rect className="track" x="246" y="233" width="76" height="4"/><rect className="bar grow grow--l" style={{ "--i": "3.8" } as React.CSSProperties} x="246" y="233" width="13.7" height="4"/><text x="338" y="239">&ndash;</text><rect className="pill" x="406" y="224" width="56" height="20" rx="10"/><text className="pt" x="434" y="237.5" textAnchor="middle">LEAD</text><path className="ln ln--faint" d="M0 256H470"/></g>
+                <svg className="crm" viewBox="0 0 470 262" preserveAspectRatio="xMinYMax meet" role="img" aria-label="An illustrative CRM lead list sorted by score. Each lead is enriched and given a score; the top lead, scored 94, is marked as a sales-qualified lead.">
+                  <g className="step" style={{ "--i": "0" } as React.CSSProperties}><text x="0" y="14">LEAD</text><text x="214" y="14">SCORE</text><text x="338" y="14">DATA</text><text x="406" y="14">STAGE</text><path className="ln ln--faint" d="M0 24H470"/></g>
+                  <g className="step hit" style={{ "--i": "0.6" } as React.CSSProperties}><circle className="ln" cx="16" cy="50" r="15"/><text x="16" y="53.5" textAnchor="middle">01</text><text className="nm" x="42" y="47">Store manager</text><text x="42" y="62">RETAIL &middot; 40+ SITES</text><text className="sc" x="214" y="56">94</text><rect className="track" x="246" y="49" width="76" height="4"/><rect className="bar grow grow--l" style={{ "--i": "1.0" } as React.CSSProperties} x="246" y="49" width="71.4" height="4"/><text x="338" y="55">&#10003; ENRICHED</text><rect className="pill" x="406" y="40" width="56" height="20" rx="10"/><text className="pt" x="434" y="53.5" textAnchor="middle">SQL</text><path className="ln ln--faint" d="M0 72H470"/></g>
+                  <g className="step" style={{ "--i": "1.3" } as React.CSSProperties}><circle className="ln" cx="16" cy="96" r="15"/><text x="16" y="99.5" textAnchor="middle">02</text><text className="nm" x="42" y="93">Head of ops</text><text x="42" y="108">CLINIC GROUP</text><text className="sc" x="214" y="102">81</text><rect className="track" x="246" y="95" width="76" height="4"/><rect className="bar grow grow--l" style={{ "--i": "1.7" } as React.CSSProperties} x="246" y="95" width="61.6" height="4"/><text x="338" y="101">&#10003; ENRICHED</text><rect className="pill" x="406" y="86" width="56" height="20" rx="10"/><text className="pt" x="434" y="99.5" textAnchor="middle">MQL</text><path className="ln ln--faint" d="M0 118H470"/></g>
+                  <g className="step" style={{ "--i": "2.0" } as React.CSSProperties}><circle className="ln" cx="16" cy="142" r="15"/><text x="16" y="145.5" textAnchor="middle">03</text><text className="nm" x="42" y="139">Buyer</text><text x="42" y="154">B2B &middot; WHOLESALE</text><text className="sc" x="214" y="148">67</text><rect className="track" x="246" y="141" width="76" height="4"/><rect className="bar grow grow--l" style={{ "--i": "2.4" } as React.CSSProperties} x="246" y="141" width="50.9" height="4"/><text x="338" y="147">&#10003; ENRICHED</text><rect className="pill" x="406" y="132" width="56" height="20" rx="10"/><text className="pt" x="434" y="145.5" textAnchor="middle">MQL</text><path className="ln ln--faint" d="M0 164H470"/></g>
+                  <g className="step" style={{ "--i": "2.7" } as React.CSSProperties}><circle className="ln" cx="16" cy="188" r="15"/><text x="16" y="191.5" textAnchor="middle">04</text><text className="nm" x="42" y="185">Coordinator</text><text x="42" y="200">LOGISTICS</text><text className="sc" x="214" y="194">42</text><rect className="track" x="246" y="187" width="76" height="4"/><rect className="bar grow grow--l" style={{ "--i": "3.1" } as React.CSSProperties} x="246" y="187" width="31.9" height="4"/><text x="338" y="193">&ndash;</text><rect className="pill" x="406" y="178" width="56" height="20" rx="10"/><text className="pt" x="434" y="191.5" textAnchor="middle">LEAD</text><path className="ln ln--faint" d="M0 210H470"/></g>
+                  <g className="step" style={{ "--i": "3.4" } as React.CSSProperties}><circle className="ln" cx="16" cy="234" r="15"/><text x="16" y="237.5" textAnchor="middle">05</text><text className="nm" x="42" y="231">Freelancer</text><text x="42" y="246">STUDIO &middot; 1 SEAT</text><text className="sc" x="214" y="240">18</text><rect className="track" x="246" y="233" width="76" height="4"/><rect className="bar grow grow--l" style={{ "--i": "3.8" } as React.CSSProperties} x="246" y="233" width="13.7" height="4"/><text x="338" y="239">&ndash;</text><rect className="pill" x="406" y="224" width="56" height="20" rx="10"/><text className="pt" x="434" y="237.5" textAnchor="middle">LEAD</text><path className="ln ln--faint" d="M0 256H470"/></g>
                 </svg>
-                <figcaption className="mono">Enriched by Clay, scored before sales sees it</figcaption>
+                <figcaption className="mono">Illustrative: enriched and scored before sales sees it</figcaption>
               </figure>
               <ul className="stats">
-                <li><strong data-count="31" data-prefix="+" data-suffix="%" data-manual>+31%</strong><span className="mono">Increase in bottom-funnel conversions</span></li>
-                <li><strong data-count="4" data-manual>4</strong><span className="mono">Sources per score: ads, CRM, warehouse, Clay</span></li>
-                <li><strong data-count="0" data-manual>0</strong><span className="mono">Leads judged on gut feel</span></li>
+                <li><strong data-count="3" data-manual>3</strong><span className="mono">Sources per score: ads, CRM, warehouse</span></li>
+                <li><strong>MCP</strong><span className="mono">Scores written straight into HubSpot</span></li>
               </ul>
             </div>
             <div className="ch__body">
-              <p className="figure"><span data-count="22" data-manual>22</span><small>Hours a week back for sales</small></p>
-              <div className="ch__copy"><h2>A lead-scoring engine sales actually uses.</h2><p>Automation linking ad platforms, CRM and the data warehouse, with Clay enriching every lead and scoring wired straight into HubSpot via MCP.</p></div>
+              <p className="figure"><span data-count="10" data-suffix="+" data-manual>10+</span><small>Hours a week back for sales</small></p>
+              <div className="ch__copy"><h2>A lead-scoring engine sales actually uses.</h2><p>Automation linking ad platforms, CRM and the data warehouse, with every lead enriched and scored, and the score wired straight into HubSpot via MCP.</p></div>
             </div>
           </div>
         </section>
         <div className="dwell zd" aria-hidden="true"></div>
 
-        <section className="stage zoom" data-tone="signal" data-label="05 / LEMAN">
+        <section className="stage zoom" id="leman" data-tone="signal" data-label="05 / LEMAN">
           <div className="word" aria-hidden="true" style={{ "--chars": "8", "--ox": "50%" } as React.CSSProperties}><span>Pipeline</span></div>
           <div className="stage__in detail">
             <div className="head head--client"><p className="client"><span className="sq" aria-hidden="true"></span>LEMAN</p><p className="mono">05 &middot; HubSpot funnel &middot; 2025</p></div>
@@ -342,14 +350,13 @@ export default function HomeClient({ posts }: { posts: PostSummary[] }) {
                 </svg>
               </figure>
               <ul className="stats">
-                <li><strong data-count="4" data-manual>4</strong><span className="mono">Funnel stages rebuilt</span></li>
-                <li><strong data-count="1" data-manual>1</strong><span className="mono">Source of truth, finally</span></li>
-                <li><strong data-count="0" data-manual>0</strong><span className="mono">Leads left on the dock</span></li>
+                <li><strong data-count="3" data-suffix="&times;" data-manual>3&times;</strong><span className="mono">SQL growth for LEMAN</span></li>
+                <li><strong data-count="44" data-prefix="+" data-suffix="%" data-manual>+44%</strong><span className="mono">MQL conversion on other HubSpot and Clay builds</span></li>
               </ul>
             </div>
             <div className="ch__body">
               <p className="figure"><span data-count="3" data-suffix="&times;" data-manual>3&times;</span><small>SQLs in a single quarter</small></p>
-              <div className="ch__copy"><h2>Attention, turned into pipeline.</h2><p>Nurture, attribution and automated handoffs for LEMAN, whose funnel was leaking leads. Elsewhere, HubSpot and Clay lifted MQL conversion 44%.</p></div>
+              <div className="ch__copy"><h2>Attention, turned into pipeline.</h2><p>Lead nurturing, attribution modelling and automated handoffs for LEMAN&rsquo;s HubSpot funnel, so sales stopped losing leads between stages.</p></div>
             </div>
           </div>
         </section>
@@ -415,6 +422,7 @@ export default function HomeClient({ posts }: { posts: PostSummary[] }) {
               <p className="email" id="email">alexdamore2@gmail.com</p>
               <button className="btn" type="button" data-copy="email">Copy email</button>
               <a className="link" href="https://www.linkedin.com/in/alexdamore/" target="_blank" rel="noopener">LinkedIn &#8599;</a>
+              <a className="link" href="/resume/alexander-damore-resume.pdf" target="_blank" rel="noopener">R&eacute;sum&eacute; (PDF) &#8599;</a>
             </div>
             </div>
             </div>

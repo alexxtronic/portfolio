@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     title: "Notes on AI and marketing",
     description,
     alternates: { canonical: "/blog", types: { "application/rss+xml": "/blog/rss.xml" } },
-    openGraph: { title: "Notes on AI and marketing | Alexander D'Amore", description, url: "/blog", type: "website", images: [{ url: "/assets/images/graphimage.png", width: 1200, height: 630 }] },
+    openGraph: { title: "Notes on AI and marketing | Alexander D'Amore", description, url: "/blog", type: "website" },
 };
 
 export default async function BlogPage() {

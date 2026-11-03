@@ -129,6 +129,20 @@ export function startScrollEngine(root: HTMLElement): ScrollEngine {
     hooks.forEach((fn) => fn({ h, still, items }));
   }
 
+  // In-page links land part-way into a chapter's dwell, once its details are in, rather than on the bare zoom word.
+  // Pinned stages report their pinned position, so the jump is measured from the sentinel instead.
+  const onClick = (e: MouseEvent) => {
+    const a = (e.target as Element).closest<HTMLAnchorElement>('a[href^="#"]');
+    const it = a && items.find((x) => x.stage.id === a.hash.slice(1));
+    if (!it) return;
+    e.preventDefault();
+    const dwellH = still || !it.dwell || !it.stage.classList.contains("zoom") ? 0 : it.dwell.offsetHeight;
+    const y = it.sentinel.getBoundingClientRect().top + scrollY - it.top + dwellH * 0.8;
+    scrollTo({ top: Math.max(0, y), behavior: "instant" });
+    history.replaceState(null, "", a.hash);
+  };
+  root.addEventListener("click", onClick);
+
   const onScroll = () => {
     if (!ticking) {
       ticking = true;
@@ -148,6 +162,7 @@ export function startScrollEngine(root: HTMLElement): ScrollEngine {
     update,
     destroy() {
       removeEventListener("scroll", onScroll);
+      root.removeEventListener("click", onClick);
       removeEventListener("resize", layout);
       removeEventListener("load", layout);
       reduce.removeEventListener("change", layout);
