@@ -184,7 +184,6 @@ export default function HomeClient({ posts }: { posts: PostSummary[] }) {
               <figure className="hero__photo">
                 <div className="hero__disc"><img src="/assets/images/headshot.webp" alt="Portrait of Alexander D&rsquo;Amore" width="1445" height="2000" /></div>
                 <svg className="hero__ring" viewBox="0 0 200 200" aria-hidden="true"><defs><path id="ringPath" d="M100,100 m-93,0 a93,93 0 1,1 186,0 a93,93 0 1,1 -186,0" /></defs><text><textPath href="#ringPath" textLength="582" lengthAdjust="spacing">Available for freelance &middot; Remote &middot; US &amp; EU hours &middot; Available for freelance &middot; Remote &middot; US &amp; EU hours &middot; </textPath></text></svg>
-                <span className="hero__pin" aria-hidden="true"></span>
               </figure>
             </div>
             <div className="hero__foot">
