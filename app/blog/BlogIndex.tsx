@@ -39,10 +39,10 @@ export default function BlogIndex({ posts }: { posts: SearchablePost[] }) {
 
     return (
         <main className="j-index">
-            <p className="j-head mono"><span><span className="sq" aria-hidden="true"></span>Notes from the work</span><span>{posts.length} posts &middot; <a href="/blog/rss.xml">RSS</a></span></p>
+            <p className="j-head mono"><span><span className="sq" aria-hidden="true"></span>The Snarky AI Marketer</span><span>{posts.length} posts &middot; <a href="/blog/rss.xml">RSS</a></span></p>
             <div className="j-intro">
-                <h1 className="j-title">Notes<span className="dot">.</span></h1>
-                <p className="j-dek">Practical writing on AI, marketing automation, CRM and creative. What I&rsquo;ve seen work in real teams, what hasn&rsquo;t, and how to set it up.</p>
+                <h1 className="j-title">Blog<span className="dot">.</span></h1>
+                <p className="j-dek">Practical AI for marketers who still believe in briefs, positioning and a decent headline. How to use the new tools the old-school way, without the hype, the &ldquo;game-changers&rdquo; or the fourteen-tool stack.</p>
             </div>
 
             <div className="j-tools">

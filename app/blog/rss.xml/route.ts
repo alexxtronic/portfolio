@@ -1,4 +1,4 @@
-import { getAllPosts, SITE_URL, AUTHOR } from "@/lib/blog";
+import { getAllPosts, SITE_URL, AUTHOR, BLOG } from "@/lib/blog";
 
 export const dynamic = "force-static";
 
@@ -19,10 +19,10 @@ export async function GET() {
     const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Notes on AI and marketing | ${esc(AUTHOR.name)}</title>
+    <title>${esc(BLOG.name)} | ${esc(AUTHOR.name)}</title>
     <link>${SITE_URL}/blog</link>
     <atom:link href="${SITE_URL}/blog/rss.xml" rel="self" type="application/rss+xml" />
-    <description>Practical writing on AI, marketing automation, CRM and creative.</description>
+    <description>${esc(BLOG.tagline)}</description>
     <language>en-us</language>
 ${items}
   </channel>

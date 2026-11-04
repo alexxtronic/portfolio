@@ -12,6 +12,12 @@ export const AUTHOR = {
     linkedin: "https://www.linkedin.com/in/alexdamore/",
     image: `${SITE_URL}/assets/images/headshot.webp`,
 };
+// The blog's brand, used in its titles, share cards, feed and structured data.
+export const BLOG = {
+    name: "The Snarky AI Marketer",
+    tagline: "Practical AI, used the old-school marketing way.",
+    description: "The Snarky AI Marketer is Alexander D'Amore's blog on using AI the practical, old-school way: briefs, positioning, customer research and CRM first, hype last.",
+};
 
 export interface PostSummary {
     slug: string;
@@ -119,7 +125,7 @@ function parseFile(file: string): Post {
         title: meta.title,
         description: meta.description,
         date: meta.date,
-        category: meta.category || "Notes",
+        category: meta.category || "Blog",
         tags: (meta.tags || "").split(",").map((t) => t.trim()).filter(Boolean),
         featured: meta.featured === "true",
         readTime: `${Math.max(1, Math.round(words / 230))} min`,

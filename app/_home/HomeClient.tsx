@@ -171,7 +171,7 @@ export default function HomeClient({ posts }: { posts: PostSummary[] }) {
         <div className="bar__row">
           <a className="bar__name" href="#top">A. D&rsquo;Amore</a>
           <div className="bar__label" id="barLabel" aria-live="polite"><span>Index</span></div>
-          <nav className="bar__nav" aria-label="Primary"><a href="#work">Work</a><a href="#notes">Notes</a><a href="#hire">Hire</a></nav>
+          <nav className="bar__nav" aria-label="Primary"><a href="#work">Work</a><a href="#blog">Blog</a><a href="#hire">Hire</a></nav>
         </div>
       </header>
 
@@ -374,10 +374,10 @@ export default function HomeClient({ posts }: { posts: PostSummary[] }) {
         </section>
         <div className="dwell zd" aria-hidden="true"></div>
 
-        <section className="stage zoom" id="notes" data-tone="signal" data-label="Notes">
-          <div className="word" aria-hidden="true" style={{ "--chars": "5", "--ox": "50%" } as React.CSSProperties}><span>Notes</span></div>
+        <section className="stage zoom" id="blog" data-tone="signal" data-label="Blog">
+          <div className="word" aria-hidden="true" style={{ "--chars": "4", "--ox": "50%" } as React.CSSProperties}><span>Blog</span></div>
           <div className="stage__in detail">
-            <div className="head head--client"><p className="client"><span className="sq" aria-hidden="true"></span>Notes from the work</p><Link className="mono link" href="/blog">All posts &rarr;</Link></div>
+            <div className="head head--client"><p className="client"><span className="sq" aria-hidden="true"></span>The Snarky AI Marketer</p><Link className="mono link" href="/blog">All posts &rarr;</Link></div>
             <ol className="posts">
               {posts.map((post) => (
                 <li key={post.slug}>

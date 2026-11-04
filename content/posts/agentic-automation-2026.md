@@ -4,7 +4,6 @@ description: AI agents are the most overused phrase in marketing right now. Here
 date: 2026-10-21
 category: AI
 tags: AI agents, automation, marketing operations, n8n, HubSpot
-featured: true
 ---
 
 Every vendor deck I've seen this year has the word "agentic" on slide two. Most of them are describing a workflow with an LLM step in the middle. That's fine. It's useful. It's just not what people think they're buying.

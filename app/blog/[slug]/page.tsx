@@ -63,7 +63,7 @@ export default async function BlogPostPage({ params }: PageProps) {
             "@type": "BreadcrumbList",
             itemListElement: [
                 { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
-                { "@type": "ListItem", position: 2, name: "Notes", item: `${SITE_URL}/blog` },
+                { "@type": "ListItem", position: 2, name: "Blog", item: `${SITE_URL}/blog` },
                 { "@type": "ListItem", position: 3, name: post.title, item: url },
             ],
         },
@@ -72,7 +72,7 @@ export default async function BlogPostPage({ params }: PageProps) {
     return (
         <main className="j-post">
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-            <nav className="j-crumbs mono" aria-label="Breadcrumb"><Link href="/blog">&larr; All notes</Link></nav>
+            <nav className="j-crumbs mono" aria-label="Breadcrumb"><Link href="/blog">&larr; All posts</Link></nav>
 
             <header className="j-post__head">
                 <p className="mono"><span className="sq" aria-hidden="true"></span>{post.category} &middot; <time dateTime={post.date}>{formatDate(post.date)}</time> &middot; {post.readTime} read</p>
@@ -103,9 +103,9 @@ export default async function BlogPostPage({ params }: PageProps) {
                 <div className="j-author">
                     <img src="/assets/images/headshot.webp" alt="Alexander D&rsquo;Amore" width="96" height="96" />
                     <div>
-                        <p className="mono">Written by</p>
+                        <p className="mono">Written by the Snarky AI Marketer</p>
                         <p className="j-author__name">{AUTHOR.name}</p>
-                        <p>Senior marketing creative and MarTech strategist. Over a decade of social, paid and brand work for names like the Empire State Building and Global Citizen, plus the CRM and automation that turn attention into pipeline. Freelancing remotely for US and EU teams from Copenhagen.</p>
+                        <p>Senior marketing creative and MarTech strategist. Ten years of social, paid and brand work for names like the Empire State Building and Global Citizen, plus the CRM and automation that turn attention into pipeline. Freelancing remotely for US and EU teams from Copenhagen.</p>
                         <Link className="j-btn" href="/#hire">Work with me <span aria-hidden="true">&rarr;</span></Link>
                     </div>
                 </div>

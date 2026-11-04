@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import { getSearchablePosts, SITE_URL, AUTHOR } from "@/lib/blog";
+import { getSearchablePosts, SITE_URL, AUTHOR, BLOG } from "@/lib/blog";
 import BlogIndex from "./BlogIndex";
 
-const description = "Practical writing on AI, marketing automation, CRM and creative from Alexander D'Amore: what works in real teams, what doesn't, and how to set it up.";
+const description = BLOG.description;
 
 export const metadata: Metadata = {
-    title: "Notes on AI and marketing",
+    title: `${BLOG.name}: practical AI for old-school marketers`,
     description,
     alternates: { canonical: "/blog", types: { "application/rss+xml": "/blog/rss.xml" } },
-    openGraph: { title: "Notes on AI and marketing | Alexander D'Amore", description, url: "/blog", type: "website" },
+    openGraph: { title: `${BLOG.name} | Alexander D'Amore`, description, url: "/blog", type: "website" },
 };
 
 export default async function BlogPage() {
@@ -17,7 +17,7 @@ export default async function BlogPage() {
         {
             "@context": "https://schema.org",
             "@type": "Blog",
-            name: "Notes on AI and marketing",
+            name: BLOG.name,
             url: `${SITE_URL}/blog`,
             description,
             author: { "@type": "Person", name: AUTHOR.name, url: AUTHOR.url },

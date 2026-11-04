@@ -7,10 +7,10 @@ export default function BlogLayout({ children }: Readonly<{ children: React.Reac
         <div className="journal">
             <header className="j-bar">
                 <Link className="j-bar__name" href="/">A. D&rsquo;Amore</Link>
-                <span className="j-bar__label mono">Notes</span>
+                <span className="j-bar__label mono">The Snarky AI Marketer</span>
                 <nav className="j-bar__nav" aria-label="Primary">
                     <Link href="/#work">Work</Link>
-                    <Link href="/blog" aria-current="page">Notes</Link>
+                    <Link href="/blog" aria-current="page">Blog</Link>
                     <Link href="/#hire">Hire</Link>
                 </nav>
             </header>
